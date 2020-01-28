@@ -1,0 +1,37 @@
+
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>BusType</th>
+                
+                <th>From</th>
+                <th>To</th>
+                <th>BusCapacity</th>
+                <th>Departure Time</th>
+                 <th>Arrival Time</th>
+                 <th>Departure Date</th>
+                 <th>Fare</th>
+                <th>Select Bus</th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let b of buses">
+                <td>{{b.BusType}}</td>
+                 
+                 <td>{{b.FromId}}</td>
+                 <td>{{b.ToId}}</td>
+                 <td>{{b.BusCapacity}}</td>
+                 <td>{{b.DepartureTime}}</td>
+                 <td>{{b.ArrivalTime}}</td>
+                 <td>{{date}}</td>
+                 <td>{{b.JourneyFare}}</td>
+                 <td ><button (click)="SelectBus(b)" type="button" class="btn btn-primary">Select</button></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+

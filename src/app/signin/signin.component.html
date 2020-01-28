@@ -1,0 +1,45 @@
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<form role="form" #myForm="ngForm" (ngSubmit)="Login(myForm.value)">
+  <legend>Login Here</legend>
+
+  <div class="form-group">
+      <label for="name">EmailId</label>
+      <input ngModel type="text" class="form-control" required email id="name" name="EmailId" #EmailId="ngModel" #spy>
+      <!-- <input type="text" class="form-control" id="name" name="EmailId">    -->
+      <div *ngIf="EmailId.invalid && (EmailId.dirty || EmailId.touched || EmailId.pristine)" class="alert alert-danger">
+        <div *ngIf="EmailId.errors.required">
+            Email id is required.
+        </div>
+        <div *ngIf="EmailId.errors.email">
+            Email Id must be valid.
+        </div>
+    </div>   
+  </div>
+
+  <div class="form-group">
+      <label for="password">password</label>
+      <input ngModel type="text" class="form-control" required minlength="4" maxlength="10" id="password" name="Password" #Password="ngModel" #spy>
+      <!-- <input type="text" class="form-control" id="password" name="password"> -->
+      <div *ngIf="Password.invalid && (Password.dirty || Password.touched || Password.pristine)" class="alert alert-danger">
+        <div *ngIf="Password.errors.required">
+            Password is required.
+        </div>
+        <div *ngIf="Password.errors.minlength">
+            Password must be at least 4 characters long.
+        </div>
+    </div>   
+  </div>
+
+  <button type="submit" [disabled]="!myForm.form.valid" class="btn btn-primary">Login</button>
+  <button (click)="cancel()" class="btn btn-danger" style="margin-left: 40px">Cancel</button>
+  <br>
+  <br>
+  
+  <button (click)="ForgotPassword()" class= "btn btn-success">Forgot Password</button>
+  <span>
+      {{message}}
+  </span>
+</form>
+</div>
+<div class="col-md-4"></div>

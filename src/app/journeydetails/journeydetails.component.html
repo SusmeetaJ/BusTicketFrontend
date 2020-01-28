@@ -1,0 +1,40 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+      <thead>
+          <tr>
+              <th>Bus Id</th>
+              <th>Route Id</th>
+              <th>BusType</th>
+              <th>To</th>
+              <th>From</th>
+              
+              <th>Departure Time</th>
+              <th>Arrival Time</th>
+              <th>BusCapacity</th>
+              <th>Available seats</th>
+              <th>Journey Fare</th>
+             
+              
+             
+              
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor= "let j of journey">
+              <td>{{j.BusId}}</td>
+              <td>{{j.RouteId}}</td>
+              <td>{{j.BusType}}</td>
+               <td>{{j.ToId}}</td>
+               <td>{{j.FromId}}</td>
+              
+               <td>{{j.DepartureTime}}</td>
+               <td>{{j.ArrivalTime}}</td>
+               <td>{{j.BusCapacity}}</td>
+               <td>{{j.Available}}</td>
+               <td>{{j.JourneyFare}}</td>
+               
+              </tr>
+      </tbody>
+  </table>
+</div>
+

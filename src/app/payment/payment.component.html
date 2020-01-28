@@ -1,0 +1,25 @@
+<!-- <p>
+  payment works!
+</p>
+<div>{{amt}}</div>
+<div>{{seats}}</div> -->
+<div class="box">
+<table>
+  <tr>
+    <td><h4><label><b>Booked Seats:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{seats}}" name="NoOfSeat" readonly ></td>
+  </tr>
+  <tr>
+    <td><h4><label><b>Amount To Be Paid:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{amt}}" name="Amount" readonly ></td>
+  </tr>
+  <tr>
+    <td><h4><label><b>Pay Amount:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input [(ngModel)]="paid" type="number" class="form-control"  name="paid"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button type="button" class="btn btn-primary" (click)=pay()>Pay</button></td>
+  </tr>
+</table>
+</div>

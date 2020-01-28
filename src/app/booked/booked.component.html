@@ -1,0 +1,54 @@
+<!-- <p>
+  booked works!{{userid}}
+  {{deptdate}}
+  {{amt}}
+  {{seat}}
+  {{journeyid}}
+</p> -->
+<h2 class="p">Your reservation Details</h2>
+<table class="p">
+  <tr>
+    <td><h4><label><b>Bus Type:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.BusType}}" name="BusType" readonly ></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><h4><label><b>Bus No:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.BusRegNo}}" name="BusRegNo" readonly ></td>
+  </tr>
+  <tr>
+    <td><h4><label><b>From:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.FromId}}" name="FromId" readonly ></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><h4><label><b>To:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.ToId}}" name="ToId" readonly ></td>
+  </tr>
+  <tr>
+    <td><h4><label><b>Arrival Time:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.ArrivalTime}}" name="ArrivalTime" readonly ></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><h4><label><b>Departure Time:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.DepartureTime}}" name="DepartureTime" readonly ></td>
+  </tr>
+  <tr>
+    <td><h4><label><b>Available Seats:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.Available}}" name="Available" readonly ></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><h4><label><b>Fare per Ticket:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.JourneyFare}} Rs" name="Available" readonly ></td>
+  </tr>
+  <tr>
+    <td><h4><label><b>Available Seats:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.Available}}" name="Available" readonly ></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><h4><label><b>Fare per Ticket:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{bus.JourneyFare}} Rs" name="Available" readonly ></td>
+  </tr>
+  <tr>
+    <td><h4><label><b>Booked Seats:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{seat}}" name="Available" readonly ></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td><h4><label><b>Amount Paid:&nbsp;&nbsp;</b></label></h4></td>
+    <td><input type="text" class="form-control" value="{{amt}} Rs" name="Available" readonly ></td>
+  </tr>
+<!-- </form> -->
+</table>
+

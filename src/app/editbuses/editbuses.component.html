@@ -1,0 +1,21 @@
+<legend>Edit Bus</legend>
+
+   
+
+    <div class="form-group">
+        <label for="Name">BusRegNo</label>
+        <input  [(ngModel)]="bus.BusRegNo" type="text" class="form-control" id="regno" name="BusRegNo">
+    </div>
+
+    <div class="form-group">
+        <label for="Address">BusType</label>
+        <input  [(ngModel)]="bus.BusType" type="text" class="form-control" id="bustype" name="BusType">
+    </div>
+    <div class="form-group">
+      <label for="Address">BusCapacity</label>
+      <input  [(ngModel)]="bus.BusCapacity" type="text" class="form-control" id="buscapacity" name="BusCapacity">
+  </div>
+
+    <button type="button" (click)="Update()" class="btn btn-primary">Update</button>
+
+

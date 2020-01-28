@@ -1,0 +1,71 @@
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<form #myForm="ngForm" (ngSubmit)="AddUser(myForm.value)">
+ <!-- <form > -->
+  <br>
+  <legend>Add New User</legend>
+
+  <div class="form-group">
+      <label for="No">EmailId</label>
+      <input ngModel type="text" class="form-control" required email id="name" name="EmailId" #EmailId="ngModel" #spy>
+      <!-- <input type="text" class="form-control" id="Email" name="EmailId"> -->
+      <div *ngIf="EmailId.invalid && (EmailId.dirty || EmailId.touched || EmailId.pristine)" class="alert alert-danger">
+        <div *ngIf="EmailId.errors.required">
+            Email id is required.
+        </div>
+        <div *ngIf="EmailId.errors.email">
+            Email Id must be valid.
+        </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label for="Name">Name</label>
+      <input ngModel type="text" class="form-control" required pattern="[A-Za-z0-9]+" id="Name" name="Name" #name="ngModel" #spy>
+      <!-- <input type="text" class="form-control" id="Name" name="Name"> -->
+      <div *ngIf="name.invalid && (name.dirty || name.touched || name.pristine)" class="alert alert-danger">
+        <div *ngIf="name.errors.required">
+            Name is required.
+        </div>
+        <div *ngIf="name.errors.pattern">
+            Allowed only Alphabets
+        </div>
+    </div>      
+  </div>
+
+  <div class="form-group">
+      <label for="Address">Password</label>
+      <input ngModel type="text" class="form-control" required minlength="4" maxlength="10"  id="Password" name="Password" #Password="ngModel" #spy>
+      <!-- <input type="text" class="form-control" id="Password" name="Password"> -->
+      <div *ngIf="Password.invalid && (Password.dirty || Password.touched || Password.pristine)" class="alert alert-danger">
+        <div *ngIf="Password.errors.required">
+            Password is required.
+        </div>
+        <div *ngIf="Password.errors.minlength">
+            Password must be at least 4 characters long.
+        </div>
+    </div> 
+  </div>
+  <div class="form-group">
+    <label for="Address">MobileNo</label>
+    <input ngModel type="text" class="form-control" required pattern="[0-9]{10}" id="MobileNo" name="MobileNo" #MobileNo="ngModel" #spy>
+    <!-- <input type="text" class="form-control" id="MobileNo" name="MobileNo"> -->
+    <div *ngIf="MobileNo.invalid && (MobileNo.dirty || MobileNo.touched || MobileNo.pristine)" class="alert alert-danger">
+        <div *ngIf="MobileNo.errors.required">
+            Mobile no is required.
+        </div>
+        <div *ngIf="MobileNo.errors.minlength">
+            Mobile No must be at least 4 characters long.
+        </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!myForm.form.valid ">Add</button>
+
+  <!-- <span>
+      {{message}}
+  </span> -->
+</form>
+</div>
+<div class="col-md-4"></div>
+
+

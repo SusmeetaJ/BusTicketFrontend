@@ -1,0 +1,33 @@
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<form #myForm="ngForm" (ngSubmit)="AddRoute(myForm.value)">
+ <!-- <form > -->
+  <br>
+  <legend>Add New Route</legend>
+
+  <div class="form-group">
+      <label for="No">From</label>
+      <input ngModel type="text" class="form-control" id="name" name="FromId" #FromId="ngModel" required>
+      <!-- <input type="text" class="form-control" id="Email" name="EmailId"> -->
+  </div>
+
+  <div class="form-group">
+      <label for="Name">To</label>
+      <input ngModel type="text" class="form-control" id="Name" name="ToId" #name="ngModel" required>
+      <!-- <input type="text" class="form-control" id="Name" name="Name"> -->      
+  </div>
+
+  <div class="form-group">
+      <label for="Address">Route Distance</label>
+      <input ngModel type="number" class="form-control" id="Password" name="RouteDistance" #Password="ngModel" required>
+      <!-- <input type="text" class="form-control" id="Password" name="Password"> --> 
+  </div>
+  <!-- <span>
+      {{message}}
+  </span> -->
+  <button type="submit" class="btn btn-primary" [disabled]="!myForm.form.valid ">Add</button>
+</form>
+</div>
+<div class="col-md-4"></div>
+
+

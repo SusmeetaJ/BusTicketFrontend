@@ -1,0 +1,36 @@
+<button (click)="Add()" type="button" class="btn btn-primary">Add Bus</button>
+
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>BusId</th><th>BusRegNo</th>
+                <th>BusType</th><th>BusCapacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of buses">
+                <td>{{b.BusId}}</td>
+                <td>{{b.BusRegNo}}</td>
+                <td>{{b.BusType}}</td>
+                <td>{{b.BusCapacity}}</td>
+                <td><a routerLink="/editbuses/{{b.BusId}}" >Edit</a> </td>
+                <!-- <td>
+                    <button type="button" (click)="Delete(RouteId)" class="btn btn-warning">Delete</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<span>
+    {{message}}
+</span>
+
+
+
+
+

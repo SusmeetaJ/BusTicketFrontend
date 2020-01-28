@@ -1,0 +1,51 @@
+<!-- <!-- <div>
+<img src="src\assets\img1.jpg" alt="kl">
+</div> -->
+
+  <body>
+    
+    <div class="box">
+      <!-- <div class="card bg-dark text-white">
+        <img src="src\assets\img1.jpg" class="card-img" alt="img1 here">
+        <div class="card-img-overlay">
+        </div>
+      </div> -->
+            <h2>Make Your Reservation</h2>
+            <form #myForm="ngForm" (ngSubmit)="Find(myForm)" role="form">
+              <!-- #myForm="ngForm" (ngSubmit)="Add(myForm)" -->
+              <br>
+              
+              <table>
+                <tr>
+              <td><label style="color:black">From</label></td>
+              <td><select ngModel class="form-control" id="From" name="FromId">
+                <!-- <option value="undefined">Select</option> -->
+                <option *ngFor="let c of cities" value={{c.CityName}}>{{c.CityName}}</option>
+              </select>
+            </td>
+            </tr>
+              <br>
+              <tr>
+              <td><label style="color:black">To</label></td>
+            <td>
+  
+                <select ngModel class="form-control" id="To" name="ToId" >
+                <!-- <option value="undefined">Select</option> -->
+                <option *ngFor="let c of cities" value={{c.CityName}}>{{c.CityName}}</option>
+                
+              </select></td></tr>
+              <td><label style="color:black">Date</label></td>
+              <td>
+                <input type="date" class="form-control" ngModel value="" name="DepartureDate">
+              </td>
+              <br>
+              <br>
+              <br>
+              
+              <tr><td></td><td><button type="submit" value="" class="btn btn-primary" >Find Bus</button></td></tr>
+            </table>
+            </form>
+          </div>
+         
+    </body>
+    
